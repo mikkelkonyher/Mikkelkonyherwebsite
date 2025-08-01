@@ -305,7 +305,7 @@ const CyberpunkPortfolio = () => {
                 <div className="space-y-4">
                   <div className="flex items-center gap-3">
                     <Calendar className="w-5 h-5 text-cyan-400" />
-                    <span>Date of Birth: {personalInfo.dateOfBirth}</span>
+                    <span>{personalInfo.dateOfBirth}</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <Mail className="w-5 h-5 text-cyan-400" />
@@ -313,12 +313,12 @@ const CyberpunkPortfolio = () => {
                       href={`mailto:${personalInfo.email}`}
                       className="text-cyan-400 hover:text-white transition-colors cursor-pointer"
                     >
-                      Email: {personalInfo.email}
+                      {personalInfo.email}
                     </a>
                   </div>
                   <div className="flex items-center gap-3">
                     <MapPin className="w-5 h-5 text-cyan-400" />
-                    <span>Location: {personalInfo.location}</span>
+                    <span>{personalInfo.location}</span>
                   </div>
                 </div>
               </CardContent>
