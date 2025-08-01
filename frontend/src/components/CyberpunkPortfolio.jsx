@@ -309,11 +309,16 @@ const CyberpunkPortfolio = () => {
                   </div>
                   <div className="flex items-center gap-3">
                     <Mail className="w-5 h-5 text-cyan-400" />
-                    <span>Email: [Contact for details]</span>
+                    <a 
+                      href={`mailto:${personalInfo.email}`}
+                      className="text-cyan-400 hover:text-white transition-colors cursor-pointer"
+                    >
+                      Email: {personalInfo.email}
+                    </a>
                   </div>
                   <div className="flex items-center gap-3">
                     <MapPin className="w-5 h-5 text-cyan-400" />
-                    <span>Address: [Contact for details]</span>
+                    <span>Location: {personalInfo.location}</span>
                   </div>
                 </div>
               </CardContent>
