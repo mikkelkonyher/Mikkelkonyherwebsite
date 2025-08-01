@@ -223,19 +223,39 @@ const CyberpunkPortfolio = () => {
           <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-cyan-400 to-transparent animate-scan-horizontal"></div>
           <div className="absolute top-0 left-0 w-1 h-full bg-gradient-to-b from-transparent via-pink-500 to-transparent animate-scan-vertical"></div>
           
-          {/* Data Stream Effect */}
-          <div className="absolute inset-0 opacity-30">
-            {[...Array(15)].map((_, i) => (
+          {/* Intensive Matrix Data Stream */}
+          <div className="absolute inset-0 opacity-40 overflow-hidden">
+            {[...Array(25)].map((_, i) => (
               <div
                 key={i}
-                className="absolute text-xs font-mono text-cyan-400 animate-data-stream"
+                className="absolute text-xs font-mono text-green-400 animate-matrix-stream whitespace-nowrap"
                 style={{
                   left: `${Math.random() * 100}%`,
-                  animationDelay: `${Math.random() * 3}s`,
-                  animationDuration: `${2 + Math.random() * 2}s`
+                  animationDelay: `${Math.random() * 5}s`,
+                  animationDuration: `${3 + Math.random() * 4}s`,
+                  fontSize: `${10 + Math.random() * 6}px`,
+                  filter: 'drop-shadow(0 0 3px #00ff41)'
                 }}
               >
-                {Math.random().toString(36).substring(2, 8)}
+                {['01', '10', '11', '00', 'ｱｲｳｴｵ', 'カキクケコ', 'サシスセソ', 'タチツテト', '0xAF', '0xFF', '0x01'][Math.floor(Math.random() * 11)]}
+              </div>
+            ))}
+          </div>
+
+          {/* Horizontal Matrix Code Lines */}
+          <div className="absolute inset-0 opacity-25">
+            {[...Array(8)].map((_, i) => (
+              <div
+                key={i}
+                className="absolute w-full text-green-400 font-mono text-xs animate-matrix-horizontal whitespace-nowrap"
+                style={{
+                  top: `${(i + 1) * 12}%`,
+                  animationDelay: `${Math.random() * 3}s`,
+                  animationDuration: `${8 + Math.random() * 4}s`,
+                  filter: 'drop-shadow(0 0 2px #00ff41)'
+                }}
+              >
+                {'01101001 11010110 10101010 11001100 01010101 10011001 11110000 00001111 '.repeat(10)}
               </div>
             ))}
           </div>
