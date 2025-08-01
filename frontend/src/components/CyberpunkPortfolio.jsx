@@ -130,22 +130,49 @@ const CyberpunkPortfolio = () => {
         <div className="absolute inset-0 bg-gradient-radial from-purple-900/20 via-transparent to-cyan-900/20 animate-fog"></div>
       </div>
 
-      {/* Dynamic Particle System - More Intense */}
+      {/* Intensive Neon Particle System */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none z-10">
-        {[...Array(50)].map((_, i) => (
+        {[...Array(80)].map((_, i) => (
           <div
             key={i}
-            className={`absolute rounded-full animate-float ${
-              i % 3 === 0 ? 'bg-cyan-400' : i % 3 === 1 ? 'bg-pink-500' : 'bg-purple-400'
+            className={`absolute animate-neon-float ${
+              i % 4 === 0 ? 'bg-green-400' : 
+              i % 4 === 1 ? 'bg-cyan-400' : 
+              i % 4 === 2 ? 'bg-pink-500' : 'bg-purple-400'
             }`}
             style={{
-              width: `${Math.random() * 4 + 1}px`,
-              height: `${Math.random() * 4 + 1}px`,
+              width: `${Math.random() * 6 + 1}px`,
+              height: `${Math.random() * 6 + 1}px`,
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
-              animationDelay: `${Math.random() * 5}s`,
-              animationDuration: `${3 + Math.random() * 4}s`,
-              boxShadow: i % 3 === 0 ? '0 0 10px #00d4ff' : i % 3 === 1 ? '0 0 10px #ff0080' : '0 0 10px #8000ff'
+              borderRadius: Math.random() > 0.5 ? '50%' : '0%',
+              animationDelay: `${Math.random() * 8}s`,
+              animationDuration: `${4 + Math.random() * 6}s`,
+              boxShadow: 
+                i % 4 === 0 ? '0 0 15px #00ff41, 0 0 30px #00ff41, 0 0 45px #00ff41' :
+                i % 4 === 1 ? '0 0 15px #00d4ff, 0 0 30px #00d4ff, 0 0 45px #00d4ff' :
+                i % 4 === 2 ? '0 0 15px #ff0080, 0 0 30px #ff0080, 0 0 45px #ff0080' :
+                '0 0 15px #8000ff, 0 0 30px #8000ff, 0 0 45px #8000ff',
+              filter: 'blur(0.5px)'
+            }}
+          ></div>
+        ))}
+        
+        {/* Larger Matrix-style Neon Orbs */}
+        {[...Array(15)].map((_, i) => (
+          <div
+            key={`orb-${i}`}
+            className="absolute rounded-full animate-matrix-orb bg-green-400"
+            style={{
+              width: `${Math.random() * 20 + 10}px`,
+              height: `${Math.random() * 20 + 10}px`,
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`,
+              animationDelay: `${Math.random() * 10}s`,
+              animationDuration: `${6 + Math.random() * 8}s`,
+              boxShadow: '0 0 20px #00ff41, 0 0 40px #00ff41, 0 0 60px #00ff41, inset 0 0 10px #00ff41',
+              opacity: 0.6,
+              filter: 'blur(1px)'
             }}
           ></div>
         ))}
