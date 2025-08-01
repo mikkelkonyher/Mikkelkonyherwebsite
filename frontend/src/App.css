@@ -72,7 +72,7 @@ body::after {
   pointer-events: none;
 }
 
-@keyframes matrixRain {
+@keyframes matrixRain1 {
   0% { background-position: 0 -100%; }
   100% { background-position: 0 100%; }
 }
@@ -83,8 +83,38 @@ body::after {
 }
 
 @keyframes matrixRain3 {
-  0% { background-position: 0 50%; }
+  0% { background-position: 0 -50%; }
+  100% { background-position: 0 150%; }
+}
+
+@keyframes matrixRain4 {
+  0% { background-position: 0 150%; }
   100% { background-position: 0 -50%; }
+}
+
+@keyframes matrixRain5 {
+  0% { background-position: 0 -25%; }
+  100% { background-position: 0 125%; }
+}
+
+@keyframes matrixRain6 {
+  0% { background-position: 0 125%; }
+  100% { background-position: 0 -25%; }
+}
+
+@keyframes matrixRain7 {
+  0% { background-position: 0 -75%; }
+  100% { background-position: 0 175%; }
+}
+
+@keyframes matrixRain8 {
+  0% { background-position: 0 175%; }
+  100% { background-position: 0 -75%; }
+}
+
+@keyframes matrixRain9 {
+  0% { background-position: 0 0%; }
+  100% { background-position: 0 100%; }
 }
 
 .App {
