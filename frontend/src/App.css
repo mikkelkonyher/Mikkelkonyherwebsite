@@ -12,9 +12,73 @@ body {
     'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #0a0a0a;
+  background: #000011;
   color: #ffffff;
   overflow-x: hidden;
+  position: relative;
+}
+
+/* Advanced Cyberpunk Background System */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(circle at 20% 80%, #ff0080 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, #00d4ff 0%, transparent 50%),
+    radial-gradient(circle at 40% 40%, #8000ff 0%, transparent 50%),
+    linear-gradient(135deg, #000011 0%, #1a0033 50%, #000022 100%);
+  opacity: 0.4;
+  z-index: -3;
+  animation: backgroundPulse 8s ease-in-out infinite alternate;
+}
+
+@keyframes backgroundPulse {
+  0% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0.6;
+    transform: scale(1.1);
+  }
+}
+
+/* Dynamic Matrix Rain Effect */
+body::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    linear-gradient(90deg, transparent 79%, #00ff41 80%, #00ff41 81%, transparent 82%),
+    linear-gradient(90deg, transparent 24%, #ff0080 25%, #ff0080 26%, transparent 27%),
+    linear-gradient(90deg, transparent 49%, #00d4ff 50%, #00d4ff 51%, transparent 52%);
+  background-size: 100px 100%, 200px 100%, 150px 100%;
+  animation: matrixRain 20s linear infinite, matrixRain2 25s linear infinite, matrixRain3 15s linear infinite;
+  opacity: 0.1;
+  z-index: -2;
+  pointer-events: none;
+}
+
+@keyframes matrixRain {
+  0% { background-position: 0 -100%; }
+  100% { background-position: 0 100%; }
+}
+
+@keyframes matrixRain2 {
+  0% { background-position: 0 100%; }
+  100% { background-position: 0 -100%; }
+}
+
+@keyframes matrixRain3 {
+  0% { background-position: 0 50%; }
+  100% { background-position: 0 -50%; }
 }
 
 .App {
