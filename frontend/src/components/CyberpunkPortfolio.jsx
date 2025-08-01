@@ -305,20 +305,20 @@ const CyberpunkPortfolio = () => {
                 <div className="space-y-4">
                   <div className="flex items-center gap-3">
                     <Calendar className="w-5 h-5 text-cyan-400" />
-                    <span>{personalInfo.dateOfBirth}</span>
+                    <span className="text-white">{personalInfo.dateOfBirth}</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <Mail className="w-5 h-5 text-cyan-400" />
                     <a 
                       href={`mailto:${personalInfo.email}`}
-                      className="text-cyan-400 hover:text-white transition-colors cursor-pointer"
+                      className="text-white hover:text-cyan-400 transition-colors cursor-pointer"
                     >
                       {personalInfo.email}
                     </a>
                   </div>
                   <div className="flex items-center gap-3">
                     <MapPin className="w-5 h-5 text-cyan-400" />
-                    <span>{personalInfo.location}</span>
+                    <span className="text-white">{personalInfo.location}</span>
                   </div>
                 </div>
               </CardContent>
@@ -523,7 +523,9 @@ const CyberpunkPortfolio = () => {
           </div>
 
           <div className="text-center text-gray-500 text-sm">
-            <p>&copy; 2024 Mikkel Konyher. Built with React & Cyberpunk Aesthetics.</p>
+            <p>
+              &copy; {new Date().getFullYear()} Mikkel Konyher. All rights reserved.
+            </p>
           </div>
         </div>
       </footer>
