@@ -293,7 +293,7 @@ const CyberpunkPortfolio = () => {
       {/* About Section */}
       <section id="about" className="py-20 px-6">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-16 text-cyan-400">
+          <h2 className="featured-heading text-4xl font-bold text-center mb-16 text-cyan-400">
             {'< CURRICULUM_VITAE />'}
           </h2>
 
@@ -420,7 +420,7 @@ const CyberpunkPortfolio = () => {
       {/* Portfolio Section */}
       <section id="portfolio" className="py-20 px-6 bg-black/30">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-16 text-cyan-400">
+          <h2 className="featured-heading text-4xl font-bold text-center mb-16 text-cyan-400 sm:text-2xl">
             {'< FEATURED_PROJECT />'}
           </h2>
 
@@ -491,11 +491,12 @@ const CyberpunkPortfolio = () => {
       <footer id="contact" className="py-12 px-6 bg-black border-t border-cyan-500/30">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-8">
-            <h2 className="text-3xl font-bold text-cyan-400 mb-4">
+            <h2 className="featured-heading text-3xl font-bold text-cyan-400 mb-4 sm:text-xl">
               {'< GET_IN_TOUCH />'}
             </h2>
             <p className="text-gray-300 max-w-2xl mx-auto">
-              Ready to collaborate or discuss opportunities? Let's connect and build something amazing together.
+              Open to exciting opportunities and eager to collaborate.
+              As a current student, I’m always curious and ready to take on challenges that help me grow – whether it’s freelance work, internships, or creative collaborations. Let’s connect and see where it leads.
             </p>
           </div>
 

@@ -483,3 +483,9 @@ a:focus {
 .bg-gradient-radial {
   background: radial-gradient(ellipse at center, var(--tw-gradient-stops));
 }
+
+@media (max-width: 390px) {
+  .featured-heading {
+    font-size: 1.25rem !important;
+  }
+}
