@@ -213,20 +213,32 @@ const CyberpunkPortfolio = () => {
           </div>
         </div>
 
-        {/* Floating particles effect */}
+        {/* Enhanced floating particles effect with more mystery */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          {[...Array(20)].map((_, i) => (
-            <div
-              key={i}
-              className="absolute w-1 h-1 bg-cyan-400 rounded-full animate-pulse"
-              style={{
-                left: `${Math.random() * 100}%`,
-                top: `${Math.random() * 100}%`,
-                animationDelay: `${Math.random() * 3}s`,
-                animationDuration: `${2 + Math.random() * 3}s`
-              }}
-            ></div>
-          ))}
+          {/* Mysterious Energy Orbs */}
+          <div className="absolute top-1/4 left-1/4 w-32 h-32 rounded-full bg-gradient-to-r from-cyan-400/20 to-purple-600/20 animate-pulse-slow blur-xl"></div>
+          <div className="absolute bottom-1/3 right-1/3 w-24 h-24 rounded-full bg-gradient-to-r from-pink-500/20 to-blue-600/20 animate-float blur-lg"></div>
+          
+          {/* Scanning Lines */}
+          <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-cyan-400 to-transparent animate-scan-horizontal"></div>
+          <div className="absolute top-0 left-0 w-1 h-full bg-gradient-to-b from-transparent via-pink-500 to-transparent animate-scan-vertical"></div>
+          
+          {/* Data Stream Effect */}
+          <div className="absolute inset-0 opacity-30">
+            {[...Array(15)].map((_, i) => (
+              <div
+                key={i}
+                className="absolute text-xs font-mono text-cyan-400 animate-data-stream"
+                style={{
+                  left: `${Math.random() * 100}%`,
+                  animationDelay: `${Math.random() * 3}s`,
+                  animationDuration: `${2 + Math.random() * 2}s`
+                }}
+              >
+                {Math.random().toString(36).substring(2, 8)}
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
