@@ -14,10 +14,10 @@ const CyberpunkPortfolio = () => {
 
   const personalInfo = {
     name: "Mikkel Konyher",
-    title: "Full Stack Software Developer",
-    email: "mikkel@example.com", // Placeholder
+    title: "Aspiring Full Stack Developer",
+    email: "Mikkelkonyher@gmail.com",
     location: "Copenhagen, Denmark",
-    dateOfBirth: "6th of April, 1989",
+    dateOfBirth: "6. April 1989",
     github: "https://github.com/mikkelkonyher"
   };
 
