@@ -215,9 +215,10 @@ const CyberpunkPortfolio = () => {
             </h1>
             <div className="h-1 w-32 bg-gradient-to-r from-cyan-400 to-blue-600 mx-auto mb-6"></div>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 font-mono">
-              {'> '}<span className="text-cyan-400">Full Stack Developer</span>
+              {'> '}<span className="text-cyan-400">Aspiring Full Stack Developer</span>
             </p>
             <p className="text-lg text-gray-400 max-w-2xl mx-auto mb-8">
+              Currently studying at Mercantec to become a Full Stack Developer. 
               Crafting scalable web applications with modern technologies. 
               From .NET backends to React frontends, I build digital experiences that matter.
             </p>
