@@ -34,6 +34,7 @@ const CyberpunkPortfolio = () => {
                 "CI/CD Deployment Pipeline"
             ],
             githubUrl: "https://github.com/mikkelkonyher/DRY",
+            projectUrl: "https://gearninja.dk",
             stats: { stars: 1, forks: 1, commits: "690+" }
         },
         {
@@ -55,6 +56,7 @@ const CyberpunkPortfolio = () => {
                 "Originally scaffolded using emergent.sh"
             ],
             githubUrl: "https://github.com/mikkelkonyher/HesseldahlSound",
+            projectUrl: "https://hesseldahlsound.com",
             stats: { stars: 0, forks: 0, commits: "100+" }
         }
     ];
@@ -470,7 +472,16 @@ const CyberpunkPortfolio = () => {
                                     </div>
                                     {/* Project Details */}
                                     <div>
-                                        <h3 className="text-3xl font-bold text-white mb-4">{project.name}</h3>
+                                        <h3 className="text-3xl font-bold text-white mb-4">
+                                            <a
+                                                href={project.projectUrl}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="hover:text-cyan-400 underline transition-colors"
+                                            >
+                                                {project.name}
+                                            </a>
+                                        </h3>
                                         <p className="text-gray-300 mb-6 leading-relaxed">
                                             {project.description}
                                         </p>
