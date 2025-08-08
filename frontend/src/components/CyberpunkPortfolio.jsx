@@ -21,20 +21,43 @@ const CyberpunkPortfolio = () => {
     github: "https://github.com/mikkelkonyher"
   };
 
-  const project = {
-    name: "Gearninja",
-    description: "A developer-focused platform designed to streamline the development of scalable, maintainable music gear sharing and community applications.",
-    technologies: ["React", "C#", ".NET Core", "Entity Framework", "JavaScript", "CSS"],
-    features: [
-      "JWT Authentication & User Management",
-      "Real-time Messaging System", 
-      "Media Upload & Management",
-      "Modular Architecture",
-      "CI/CD Deployment Pipeline"
-    ],
-    githubUrl: "https://github.com/mikkelkonyher/DRY",
-    stats: { stars: 1, forks: 1, commits: "690+" }
-  };
+    const projects = [
+        {
+            name: "Gearninja.dk",
+            description: "A developer-focused platform designed to streamline the development of scalable, maintainable music gear sharing and community applications.",
+            technologies: ["React", "C#", ".NET Core", "Entity Framework", "JavaScript", "CSS"],
+            features: [
+                "JWT Authentication & User Management",
+                "Real-time Messaging System",
+                "Media Upload & Management",
+                "Modular Architecture",
+                "CI/CD Deployment Pipeline"
+            ],
+            githubUrl: "https://github.com/mikkelkonyher/DRY",
+            stats: { stars: 1, forks: 1, commits: "690+" }
+        },
+        {
+            name: "HesseldahlSound.com",
+            description: "The official website for hesseldahlsound.com — the personal audio mixing and mastering service of Mikkel Hesseldahl Konyher. Designed with a modern, dark aesthetic and written in first-person, reflecting Mikkel’s solo operation. Originally scaffolded using emergent.sh, then refined and expanded to fit the specific needs of the business.",
+            technologies: [
+                "React 18",
+                "Tailwind CSS",
+                "shadcn/ui",
+                "Lucide React",
+                "React Router DOM",
+                "EmailJS (contact form integration)",
+                "Craco (build config)"
+            ],
+            features: [
+                "Modern dark UI",
+                "Contact form integration (EmailJS)",
+                "Responsive design",
+                "Originally scaffolded using emergent.sh"
+            ],
+            githubUrl: "https://github.com/mikkelkonyher/HesseldahlSound",
+            stats: { stars: 0, forks: 0, commits: "100+" }
+        }
+    ];
 
   const skills = {
     programming: ["JavaScript", "C#", "C++"],
@@ -417,75 +440,77 @@ const CyberpunkPortfolio = () => {
         </div>
       </section>
 
-      {/* Portfolio Section */}
-      <section id="portfolio" className="py-20 px-6 bg-black/30">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="featured-heading text-4xl font-bold text-center mb-16 text-cyan-400 sm:text-2xl">
-            {'< FEATURED_PROJECT />'}
-          </h2>
-
-          <Card className="bg-black/50 border-cyan-500/30 backdrop-blur overflow-hidden group hover:border-cyan-400/50 transition-all duration-300">
-            <CardContent className="p-8">
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                {/* Project Image/Visual */}
-                <div className="relative">
-                  <div className="bg-gradient-to-br from-cyan-500/20 to-blue-600/20 rounded-lg p-8 h-64 flex items-center justify-center">
-                    <Code className="w-20 h-20 text-cyan-400" />
-                  </div>
-                  <div className="absolute top-4 right-4 flex gap-2">
-                    <Badge className="bg-cyan-500/20 text-cyan-400 border-cyan-500/50">
-                      {project.stats.stars}★
-                    </Badge>
-                    <Badge className="bg-cyan-500/20 text-cyan-400 border-cyan-500/50">
-                      {project.stats.forks} forks
-                    </Badge>
-                  </div>
+        {/* Portfolio Section */}
+        <section id="portfolio" className="py-20 px-6 bg-black/30">
+            <div className="max-w-6xl mx-auto">
+                <h2 className="featured-heading text-4xl font-bold text-center mb-16 text-cyan-400 sm:text-2xl">
+                    {'< FEATURED_PROJECTS />'}
+                </h2>
+                <div className="space-y-12">
+                    {projects.map((project, idx) => (
+                        <Card
+                            key={idx}
+                            className="bg-black/50 border-cyan-500/30 backdrop-blur overflow-hidden group hover:border-cyan-400/50 transition-all duration-300"
+                        >
+                            <CardContent className="p-8">
+                                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                                    {/* Project Image/Visual */}
+                                    <div className="relative">
+                                        <div className="bg-gradient-to-br from-cyan-500/20 to-blue-600/20 rounded-lg p-8 h-64 flex items-center justify-center">
+                                            <Code className="w-20 h-20 text-cyan-400" />
+                                        </div>
+                                        <div className="absolute top-4 right-4 flex gap-2">
+                                            <Badge className="bg-cyan-500/20 text-cyan-400 border-cyan-500/50">
+                                                {project.stats.stars}★
+                                            </Badge>
+                                            <Badge className="bg-cyan-500/20 text-cyan-400 border-cyan-500/50">
+                                                {project.stats.forks} forks
+                                            </Badge>
+                                        </div>
+                                    </div>
+                                    {/* Project Details */}
+                                    <div>
+                                        <h3 className="text-3xl font-bold text-white mb-4">{project.name}</h3>
+                                        <p className="text-gray-300 mb-6 leading-relaxed">
+                                            {project.description}
+                                        </p>
+                                        <div className="mb-6">
+                                            <h4 className="text-lg font-semibold text-cyan-400 mb-3">Key Features:</h4>
+                                            <ul className="space-y-2">
+                                                {project.features.map((feature, i) => (
+                                                    <li key={i} className="flex items-center gap-2 text-gray-300">
+                                                        <div className="w-1 h-1 bg-cyan-400 rounded-full"></div>
+                                                        {feature}
+                                                    </li>
+                                                ))}
+                                            </ul>
+                                        </div>
+                                        <div className="mb-6">
+                                            <h4 className="text-lg font-semibold text-cyan-400 mb-3">Technologies:</h4>
+                                            <div className="flex flex-wrap gap-2">
+                                                {project.technologies.map((tech, i) => (
+                                                    <Badge key={i} variant="outline" className="border-cyan-500/50 text-cyan-400">
+                                                        {tech}
+                                                    </Badge>
+                                                ))}
+                                            </div>
+                                        </div>
+                                        <div className="flex gap-4">
+                                            <Button asChild className="bg-cyan-500 hover:bg-cyan-400 text-black">
+                                                <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
+                                                    <Github className="w-4 h-4 mr-2" />
+                                                    View on GitHub
+                                                </a>
+                                            </Button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </CardContent>
+                        </Card>
+                    ))}
                 </div>
-
-                {/* Project Details */}
-                <div>
-                  <h3 className="text-3xl font-bold text-white mb-4">{project.name}</h3>
-                  <p className="text-gray-300 mb-6 leading-relaxed">
-                    {project.description}
-                  </p>
-
-                  <div className="mb-6">
-                    <h4 className="text-lg font-semibold text-cyan-400 mb-3">Key Features:</h4>
-                    <ul className="space-y-2">
-                      {project.features.map((feature, i) => (
-                        <li key={i} className="flex items-center gap-2 text-gray-300">
-                          <div className="w-1 h-1 bg-cyan-400 rounded-full"></div>
-                          {feature}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  <div className="mb-6">
-                    <h4 className="text-lg font-semibold text-cyan-400 mb-3">Technologies:</h4>
-                    <div className="flex flex-wrap gap-2">
-                      {project.technologies.map((tech, i) => (
-                        <Badge key={i} variant="outline" className="border-cyan-500/50 text-cyan-400">
-                          {tech}
-                        </Badge>
-                      ))}
-                    </div>
-                  </div>
-
-                  <div className="flex gap-4">
-                    <Button asChild className="bg-cyan-500 hover:bg-cyan-400 text-black">
-                      <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
-                        <Github className="w-4 h-4 mr-2" />
-                        View on GitHub
-                      </a>
-                    </Button>
-                  </div>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
-        </div>
-      </section>
+            </div>
+        </section>
 
       {/* Contact Section - Footer */}
       <footer id="contact" className="py-12 px-6 bg-black border-t border-cyan-500/30">
