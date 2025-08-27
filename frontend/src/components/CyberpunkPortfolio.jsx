@@ -472,7 +472,7 @@ const CyberpunkPortfolio = () => {
                                     </div>
                                     {/* Project Details */}
                                     <div>
-                                        <h3 className="text-3xl font-bold text-white mb-4">
+                                        <h3 className="text-xl sm:text-3xl font-bold text-white mb-4 break-words">
                                             <a
                                                 href={project.projectUrl}
                                                 target="_blank"
