@@ -37,9 +37,59 @@ const CyberpunkPortfolio = () => {
             projectUrl: "https://gearninja.dk",
             stats: { stars: 1, forks: 1, commits: "690+" }
         },
+
+        {
+            name: "IoT-Project-Guldgruppen",
+            description: "A full-stack IoT system developed as part of my programming studies at Mercantec, created in an agile team to monitor indoor climate and security conditions using Arduino sensors and a modern web platform.",
+            technologies: [
+                "C++ (Arduino)",
+                "C# / .NET Core",
+                "Entity Framework Core",
+                "PostgreSQL",
+                "React",
+                "JavaScript",
+                "CSS"
+            ],
+            features: [
+                "Sensor integration: Arduino-based firmware captures environmental data and transmits it to the backend.",
+                "Backend API: C# /.NET Core service handling data ingestion, validation, and storage.",
+                "Database layer: Entity Framework Core ORM backed by a PostgreSQL database for reliable persistence.",
+                "Web frontend: React-based interface for real-time data visualization and system management.",
+                "Modular architecture: Clear separation between hardware, backend, and frontend for scalability and maintainability.",
+                "End-to-end IoT pipeline: From sensor readings to interactive dashboards."
+            ],
+            githubUrl: "https://github.com/Mercantec-GHC/iot-project-guldgruppen",
+            projectUrl: "https://github.com/Mercantec-GHC/iot-project-guldgruppen",
+            stats: { stars: 0, forks: 0, commits: "0+" }
+        },
+
+        {
+            name: "Minapaasche.com",
+            description: "A clean, minimalistic artist portfolio for Mina Paasche, built with modern React tooling and deployed on Mercantec’s Linux servers, showcasing both frontend design and deployment capabilities.",
+            technologies: [
+                "React 18",
+                "Tailwind CSS",
+                "shadcn/ui",
+                "Lucide React",
+                "React Router DOM",
+                "EmailJS (contact form integration)",
+                "Custom deployment: Hosted and maintained on institutional Linux servers using standard web deployment pipelines.",
+                "Craco (build config)"
+            ],
+            features: [
+                "Minimalist responsive UI: Designed with Tailwind CSS",
+                "Contact form integration (EmailJS)",
+                "Responsive design",
+                "Originally scaffolded using emergent.sh"
+            ],
+            githubUrl: "https://github.com/mikkelkonyher/minapaasche",
+            projectUrl: "https://minapaasche.com",
+            stats: { stars: 0, forks: 0, commits: "0+" }
+        },
+
         {
             name: "HesseldahlSound.com",
-            description: "The official website for hesseldahlsound.com — the personal audio mixing and mastering service of Mikkel Hesseldahl Konyher. Designed with a modern, dark aesthetic and written in first-person, reflecting Mikkel’s solo operation. Originally scaffolded using emergent.sh, then refined and expanded to fit the specific needs of the business.",
+            description: "The official website for hesseldahlsound.com - The personal audio mixing and mastering service of Mikkel Hesseldahl Konyher. Designed with a modern, dark aesthetic and written in first-person, reflecting Mikkel’s solo operation. Originally scaffolded using emergent.sh, then refined and expanded to fit the specific needs of the business.",
             technologies: [
                 "React 18",
                 "Tailwind CSS",
@@ -58,7 +108,9 @@ const CyberpunkPortfolio = () => {
             githubUrl: "https://github.com/mikkelkonyher/HesseldahlSound",
             projectUrl: "https://hesseldahlsound.com",
             stats: { stars: 0, forks: 0, commits: "100+" }
-        }
+        },
+
+
     ];
 
   const skills = {
