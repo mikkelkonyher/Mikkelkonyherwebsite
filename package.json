@@ -3,7 +3,7 @@
     "gh-pages": "^6.3.0"
   },
   "scripts": {
-    "predeploy": "npm --prefix frontend install && npm --prefix frontend run build",
-    "deploy": "gh-pages -d frontend/build -c mikkelkonyher.dk"
+    "predeploy": "npm --prefix frontend run build",
+    "deploy": "gh-pages -d frontend/build"
   }
 }
