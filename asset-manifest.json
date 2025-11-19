@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Mikkelkonyherwebsite/static/css/main.5d0e1c78.css",
+    "main.js": "/Mikkelkonyherwebsite/static/js/main.fd260272.js",
+    "index.html": "/Mikkelkonyherwebsite/index.html",
+    "main.5d0e1c78.css.map": "/Mikkelkonyherwebsite/static/css/main.5d0e1c78.css.map",
+    "main.fd260272.js.map": "/Mikkelkonyherwebsite/static/js/main.fd260272.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5d0e1c78.css",
+    "static/js/main.fd260272.js"
+  ]
+}
