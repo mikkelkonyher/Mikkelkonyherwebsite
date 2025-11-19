@@ -59,8 +59,8 @@
     "start": "craco start",
     "build": "craco build",
     "test": "craco test",
-    "predeploy": "gh-pages-clean && npm run build",
-    "deploy": "gh-pages -d build -r git@github.com:mikkelkonyher/Mikkelkonyherwebsite.git"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "browserslist": {
     "production": [
