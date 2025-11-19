@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Redirecting…</title>
+    <meta http-equiv="refresh" content="0; url=https://mikkelkonyher.dk/" />
+    <style>
+      body { font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif; padding: 2rem; line-height: 1.5; }
+      a { color: #0b5fff; }
+    </style>
+    <script>
+      (function () {
+        try {
+          // Prefer custom domain if configured; fall back to the GitHub Pages project URL
+          var target = 'https://mikkelkonyher.dk/';
+          if (location.hostname.endsWith('github.io')) {
+            target = 'https://mikkelkonyher.github.io/Mikkelkonyherwebsite/';
+          }
+          window.location.replace(target);
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body>
+    <noscript>
+      <p>You are being redirected to the site…</p>
+      <p>
+        If you are not redirected automatically, <a href="https://mikkelkonyher.dk/">click here</a>.
+      </p>
+    </noscript>
+  </body>
+  </html>
