@@ -3,6 +3,7 @@ import { Github, Mail, MapPin, Calendar, ExternalLink, Code, Database, Monitor }
 import { Button } from './ui/button';
 import { Card, CardContent } from './ui/card';
 import { Badge } from './ui/badge';
+import Aurora from './Aurora/Aurora';
 
 const CyberpunkPortfolio = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -178,81 +179,14 @@ const CyberpunkPortfolio = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-900 text-white overflow-x-hidden">
-      {/* Enhanced Cyberpunk Background Effects */}
-      <div className="fixed inset-0 opacity-20 pointer-events-none z-0">
-        {/* Animated Geometric Shapes */}
-        <div className="absolute top-20 left-10 w-32 h-32 border border-cyan-400 rotate-45 animate-spin-slow opacity-30"></div>
-        <div className="absolute top-40 right-20 w-24 h-24 border-2 border-pink-500 animate-pulse"></div>
-        <div className="absolute bottom-32 left-1/4 w-16 h-16 bg-gradient-to-r from-purple-500 to-transparent rotate-12 animate-bounce-slow"></div>
-        
-        {/* Glitch Lines */}
-        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-cyan-400 to-transparent animate-glitch-line"></div>
-        <div className="absolute top-1/3 left-0 w-full h-0.5 bg-gradient-to-r from-transparent via-pink-500 to-transparent animate-glitch-line-2"></div>
-        <div className="absolute bottom-1/4 left-0 w-full h-0.5 bg-gradient-to-r from-transparent via-purple-400 to-transparent animate-glitch-line-3"></div>
-        
-        {/* Circuit Board Pattern */}
-        <div className="absolute inset-0 opacity-10" style={{
-          backgroundImage: `
-            linear-gradient(90deg, #00d4ff 1px, transparent 1px),
-            linear-gradient(180deg, #00d4ff 1px, transparent 1px),
-            linear-gradient(90deg, #ff0080 1px, transparent 1px),
-            linear-gradient(180deg, #ff0080 1px, transparent 1px)
-          `,
-          backgroundSize: '100px 100px, 100px 100px, 200px 200px, 200px 200px',
-          backgroundPosition: '0 0, 0 0, 50px 50px, 50px 50px'
-        }}></div>
-        
-        {/* Mysterious Fog Effect */}
-        <div className="absolute inset-0 bg-gradient-radial from-purple-900/20 via-transparent to-cyan-900/20 animate-fog"></div>
-      </div>
-
-      {/* Intensive Neon Particle System */}
-      <div className="fixed inset-0 overflow-hidden pointer-events-none z-10">
-        {[...Array(80)].map((_, i) => (
-          <div
-            key={i}
-            className={`absolute animate-neon-float ${
-              i % 4 === 0 ? 'bg-green-400' : 
-              i % 4 === 1 ? 'bg-cyan-400' : 
-              i % 4 === 2 ? 'bg-pink-500' : 'bg-purple-400'
-            }`}
-            style={{
-              width: `${Math.random() * 6 + 1}px`,
-              height: `${Math.random() * 6 + 1}px`,
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              borderRadius: Math.random() > 0.5 ? '50%' : '0%',
-              animationDelay: `${Math.random() * 8}s`,
-              animationDuration: `${4 + Math.random() * 6}s`,
-              boxShadow: 
-                i % 4 === 0 ? '0 0 15px #00ff41, 0 0 30px #00ff41, 0 0 45px #00ff41' :
-                i % 4 === 1 ? '0 0 15px #00d4ff, 0 0 30px #00d4ff, 0 0 45px #00d4ff' :
-                i % 4 === 2 ? '0 0 15px #ff0080, 0 0 30px #ff0080, 0 0 45px #ff0080' :
-                '0 0 15px #8000ff, 0 0 30px #8000ff, 0 0 45px #8000ff',
-              filter: 'blur(0.5px)'
-            }}
-          ></div>
-        ))}
-        
-        {/* Larger Matrix-style Neon Orbs */}
-        {[...Array(15)].map((_, i) => (
-          <div
-            key={`orb-${i}`}
-            className="absolute rounded-full animate-matrix-orb bg-green-400"
-            style={{
-              width: `${Math.random() * 20 + 10}px`,
-              height: `${Math.random() * 20 + 10}px`,
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              animationDelay: `${Math.random() * 10}s`,
-              animationDuration: `${6 + Math.random() * 8}s`,
-              boxShadow: '0 0 20px #00ff41, 0 0 40px #00ff41, 0 0 60px #00ff41, inset 0 0 10px #00ff41',
-              opacity: 0.6,
-              filter: 'blur(1px)'
-            }}
-          ></div>
-        ))}
+    <div className="relative z-0 min-h-screen bg-gray-900 text-white overflow-x-hidden">
+      {/* Aurora Background */}
+      <div className="fixed inset-0 pointer-events-none -z-10">
+        <Aurora
+          colorStops={["#5227FF", "#7C3AED", "#5227FF"]}
+          amplitude={1}
+          blend={0.5}
+        />
       </div>
 
       {/* Navigation */}
@@ -315,54 +249,6 @@ const CyberpunkPortfolio = () => {
             >
               ABOUT ME
             </Button>
-          </div>
-        </div>
-
-        {/* Enhanced floating particles effect with more mystery */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          {/* Mysterious Energy Orbs */}
-          <div className="absolute top-1/4 left-1/4 w-32 h-32 rounded-full bg-gradient-to-r from-cyan-400/20 to-purple-600/20 animate-pulse-slow blur-xl"></div>
-          <div className="absolute bottom-1/3 right-1/3 w-24 h-24 rounded-full bg-gradient-to-r from-pink-500/20 to-blue-600/20 animate-float blur-lg"></div>
-          
-          {/* Scanning Lines */}
-          <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-cyan-400 to-transparent animate-scan-horizontal"></div>
-          <div className="absolute top-0 left-0 w-1 h-full bg-gradient-to-b from-transparent via-pink-500 to-transparent animate-scan-vertical"></div>
-          
-          {/* Intensive Matrix Data Stream */}
-          <div className="absolute inset-0 opacity-40 overflow-hidden">
-            {[...Array(25)].map((_, i) => (
-              <div
-                key={i}
-                className="absolute text-xs font-mono text-green-400 animate-matrix-stream whitespace-nowrap"
-                style={{
-                  left: `${Math.random() * 100}%`,
-                  animationDelay: `${Math.random() * 5}s`,
-                  animationDuration: `${3 + Math.random() * 4}s`,
-                  fontSize: `${10 + Math.random() * 6}px`,
-                  filter: 'drop-shadow(0 0 3px #00ff41)'
-                }}
-              >
-                {['01', '10', '11', '00', 'ｱｲｳｴｵ', 'カキクケコ', 'サシスセソ', 'タチツテト', '0xAF', '0xFF', '0x01'][Math.floor(Math.random() * 11)]}
-              </div>
-            ))}
-          </div>
-
-          {/* Horizontal Matrix Code Lines */}
-          <div className="absolute inset-0 opacity-25">
-            {[...Array(8)].map((_, i) => (
-              <div
-                key={i}
-                className="absolute w-full text-green-400 font-mono text-xs animate-matrix-horizontal whitespace-nowrap"
-                style={{
-                  top: `${(i + 1) * 12}%`,
-                  animationDelay: `${Math.random() * 3}s`,
-                  animationDuration: `${8 + Math.random() * 4}s`,
-                  filter: 'drop-shadow(0 0 2px #00ff41)'
-                }}
-              >
-                {'01101001 11010110 10101010 11001100 01010101 10011001 11110000 00001111 '.repeat(10)}
-              </div>
-            ))}
           </div>
         </div>
       </section>
