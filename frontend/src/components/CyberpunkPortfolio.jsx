@@ -17,7 +17,7 @@ const CyberpunkPortfolio = () => {
     name: "Mikkel Konyher",
     title: "Aspiring Full Stack Developer",
     email: "Mikkelkonyher@gmail.com",
-    location: "Copenhagen, Denmark",
+    location: "Tåsinge, Funen, Denmark",
     dateOfBirth: "6. April 1989",
     github: "https://github.com/mikkelkonyher"
   };
@@ -124,6 +124,12 @@ const CyberpunkPortfolio = () => {
   };
 
   const experience = [
+    {
+      title: "Student Assistant",
+      company: "Digidi",
+      period: "2026-present",
+      description: "Frontend development in React."
+    },
     {
       title: "Mix & Mastering Engineer",
       company: "Hesseldahl Sound, Copenhagen",
