@@ -1,39 +1,36 @@
-# Deploying to GitHub Pages
+# mikkelkonyher.dk
 
-This project is configured to deploy the React frontend (in the `frontend` folder) to GitHub Pages using the `gh-pages` package.
+React-frontend (i mappen `frontend`) som deployes til GitHub Pages via GitHub Actions.
 
-Prerequisites
-- You have this repository pushed to GitHub.
-- Your Git remote `origin` points to the GitHub repo.
-- Node.js and npm are installed locally.
+## Kør lokalt
 
-One-time GitHub setup
-1) Push the latest changes (including the deploy scripts) to GitHub:
-   - git add -A
-   - git commit -m "Add gh-pages deploy"
-   - git push
-2) On GitHub: Repository → Settings → Pages
-   - Build and deployment → Source: Deploy from a branch
-   - Branch: gh-pages, Folder: /(root)
-   - Save
+```
+cd frontend
+npm install
+npm start
+```
 
-How to deploy (from your computer)
-1) From the repository root:
-   - npm install
-   - npm run deploy
+Appen kører på http://localhost:3000.
 
-What it does
-- Builds the React app inside `frontend` to `frontend/build`.
-- Publishes that build to the `gh-pages` branch.
+## Deploy
 
-Your site URL
-- https://mikkelkonyher.github.io/Mikkelkonyherwebsite/
+Deploy sker automatisk: **push til `main`**, så bygger og udgiver
+`.github/workflows/deploy.yml` sitet til https://mikkelkonyher.dk.
 
-Subsequent deploys
-- Just run: npm run deploy
+Status for det enkelte deploy kan følges under repoets fanen **Actions**.
+Workflowet kan også startes manuelt derfra (**Run workflow**).
 
-Troubleshooting
-- If `npm run deploy` isn’t found, ensure you run it from the repository root and that `package.json` contains `deploy` and `predeploy` scripts.
-- If the page loads without styles or is blank, wait a couple minutes and hard refresh. The `homepage` field in `frontend/package.json` is already set to the correct URL.
-- Ensure the GitHub Pages settings are set to deploy from the `gh-pages` branch.
-- Confirm that the `gh-pages` branch exists after running the deploy command (GitHub → Branches).
+## Opsætning
+
+- GitHub Pages-kilden er sat til **GitHub Actions** (Settings → Pages).
+- Custom domæne `mikkelkonyher.dk` er sat i Settings → Pages og ligger
+  desuden i `frontend/public/CNAME`, så det følger med i buildet.
+- `homepage` i `frontend/package.json` skal matche domænet — ellers får
+  assets et forkert sti-præfiks og sitet bliver blankt.
+
+## Fejlfinding
+
+- Blankt site efter deploy: tjek `homepage` i `frontend/package.json`
+  og at `CNAME` stadig ligger i `frontend/public`.
+- Build fejler i Actions men virker lokalt: workflowet sætter `CI: false`,
+  fordi `react-scripts` ellers behandler eslint-warnings som fejl.
