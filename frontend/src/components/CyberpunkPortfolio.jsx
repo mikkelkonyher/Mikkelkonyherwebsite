@@ -56,6 +56,63 @@ const CyberpunkPortfolio = () => {
             stats: { stars: 0, forks: 0, commits: "146+" }
         },
         {
+            name: "Post Danmark Delivery Routes",
+            description: "A delivery route app built with Post Danmark as the case, made in a team as an H4 project at Mercantec. Drivers sign in, follow their assigned route on a map with road routing between stops, and mark each stop as they complete it. React Native and Expo on the front, a C# .NET API behind it, with the whole stack running in Docker.",
+            technologies: [
+                "React Native",
+                "Expo (Expo Router)",
+                "TypeScript",
+                "react-native-maps",
+                "Leaflet",
+                "C# / .NET",
+                ".NET Aspire",
+                "Entity Framework Core",
+                "Docker & nginx",
+                "Bruno (API testing)",
+                "GitHub Actions",
+                "Next.js & MDX (docs)"
+            ],
+            features: [
+                "Role-based sign-in with tokens held in the device secure store",
+                "Delivery routes drawn on a map, with road routing calculated between stops",
+                "Stop-by-stop status tracking as a route is worked through",
+                "Route creation and assignment from inside the app",
+                "C# API with Entity Framework migrations and a unit test project",
+                "Whole stack containerised and served behind nginx",
+                "Documentation site built with Next.js and MDX alongside the code",
+                "Team project run through GitHub Classroom with CI on GitHub Actions"
+            ],
+            githubUrl: "https://github.com/Mercantec-GHC/h4-26-gruppe1o-postdanmark",
+            projectUrl: "https://github.com/Mercantec-GHC/h4-26-gruppe1o-postdanmark",
+            stats: { stars: 1, forks: 1, commits: "162+" }
+        },
+        {
+            name: "IoT-Project-Guldgruppen",
+            description: "A full-stack IoT system developed as part of my programming studies at Mercantec, built by a Scrum team to monitor indoor climate and security conditions using Arduino sensors and a modern web platform.",
+            technologies: [
+                "C++ (Arduino)",
+                "C# / .NET Core",
+                "Entity Framework Core",
+                "PostgreSQL",
+                "React",
+                "JavaScript",
+                "CSS"
+            ],
+            features: [
+                "Sensor integration: Arduino-based firmware captures environmental data and transmits it to the backend.",
+                "Backend API: C# /.NET Core service handling data ingestion, validation, and storage.",
+                "Database layer: Entity Framework Core ORM backed by a PostgreSQL database for reliable persistence.",
+                "Web frontend: React-based interface for real-time data visualization and system management.",
+                "Modular architecture: Clear separation between hardware, backend, and frontend for scalability and maintainability.",
+                "End-to-end IoT pipeline: From sensor readings to interactive dashboards.",
+                "Scrum workflow: daily standups, sprint planning and a shared GitHub Projects board."
+            ],
+            githubUrl: "https://github.com/Mercantec-GHC/iot-project-guldgruppen",
+            projectUrl: "https://github.com/Mercantec-GHC/iot-project-guldgruppen",
+            stats: { stars: 0, forks: 0, commits: "0+" }
+        },
+
+        {
             name: "Vårø Contemporary",
             description: "The website for Vårø Contemporary, an artist-run exhibition space, project room and artist residency on Tåsinge in southern Denmark, focused on sound and moving images. A static, fully bilingual site where all text and images live in the repository, so publishing a change means committing it and letting Vercel rebuild.",
             technologies: [
@@ -135,32 +192,6 @@ const CyberpunkPortfolio = () => {
         },
 
         {
-            name: "IoT-Project-Guldgruppen",
-            description: "A full-stack IoT system developed as part of my programming studies at Mercantec, built by a Scrum team to monitor indoor climate and security conditions using Arduino sensors and a modern web platform.",
-            technologies: [
-                "C++ (Arduino)",
-                "C# / .NET Core",
-                "Entity Framework Core",
-                "PostgreSQL",
-                "React",
-                "JavaScript",
-                "CSS"
-            ],
-            features: [
-                "Sensor integration: Arduino-based firmware captures environmental data and transmits it to the backend.",
-                "Backend API: C# /.NET Core service handling data ingestion, validation, and storage.",
-                "Database layer: Entity Framework Core ORM backed by a PostgreSQL database for reliable persistence.",
-                "Web frontend: React-based interface for real-time data visualization and system management.",
-                "Modular architecture: Clear separation between hardware, backend, and frontend for scalability and maintainability.",
-                "End-to-end IoT pipeline: From sensor readings to interactive dashboards.",
-                "Scrum workflow: daily standups, sprint planning and a shared GitHub Projects board."
-            ],
-            githubUrl: "https://github.com/Mercantec-GHC/iot-project-guldgruppen",
-            projectUrl: "https://github.com/Mercantec-GHC/iot-project-guldgruppen",
-            stats: { stars: 0, forks: 0, commits: "0+" }
-        },
-
-        {
             name: "Minapaasche.com",
             description: "A clean, minimalistic artist portfolio for Mina Paasche, built with modern React tooling and deployed on Mercantec’s Linux servers, showcasing both frontend design and deployment capabilities.",
             technologies: [
@@ -187,8 +218,8 @@ const CyberpunkPortfolio = () => {
     ];
 
   const skills = {
-    programming: ["JavaScript", "TypeScript", "C#", "C++"],
-    frameworks: ["React", "Next.js", "Tailwind CSS", "Bootstrap", "jQuery", "Blazor"],
+    programming: ["JavaScript", "TypeScript", "C#", "C++", "Dart"],
+    frameworks: ["React", "React Native", "Flutter", "Next.js", "Tailwind CSS", "Bootstrap", "jQuery", "Blazor"],
     backend: [".NET Core", "Entity Framework", "Supabase (BaaS)", "Deno (Edge Functions)"],
     database: ["PostgreSQL"],
     tools: ["Git", "GitHub", "GitLab", "Docker", "Vite", "VS Code", "WebStorm", "Rider", "Azure", "Dokploy", "Bruno", "Claude Code"],
